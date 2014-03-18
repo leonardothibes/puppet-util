@@ -1,11 +1,8 @@
-name    'leonardothibes-php'
+name    'leonardothibes-util'
 author  'leonardothibes'
-version '1.3.1'
+version '1.0.0'
 license 'MIT'
-summary 'A puppet module to manage PHP'
-description 'A puppet module to manage PHP'
-source 'git://github.com/leonardothibes/puppet-php.git'
-project_page 'http://github.com/leonardothibes/puppet-php'
-
-## Add dependencies:
-dependency 'leonardothibes/wget', '>= 1.0.0'
+summary 'My Standard Library for Puppet Modules'
+description 'This module provides a "standard library" of resources for developing Puppet Modules'
+source 'git://github.com/leonardothibes/puppet-util.git'
+project_page 'http://github.com/leonardothibes/puppet-util'
