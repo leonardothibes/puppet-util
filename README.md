@@ -14,7 +14,7 @@ Modules. This modules will include the following additions to Puppet
 
 chmod
 -----
-Change the permission of  file or directory.
+Change the permission of file or directory.
 
 *Examples:*
 ```puppet
@@ -31,6 +31,24 @@ util::chmod {'Changing permission for some directory':
 }
 ```
 
+chown
+-----
+Change the owner of file or directory.
+
+*Examples:*
+```puppet
+util::chown {'Changing owner for some file':
+	file => '/root/file.txt',
+	user => 'root',
+}
+```
+or
+```puppet
+util::own {'Changing owner for some directory':
+	file => '/srv',
+	user => adm,
+}
+```
 
 # Contact #
 
