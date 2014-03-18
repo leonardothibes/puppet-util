@@ -12,5 +12,5 @@ define util::chmod(
 		path    => $util::envpath,
 		command => "${command} ${mode} ${file}",
 		onlyif  => "[ -f ${file} ] || [ -d ${file} ]",
-	}   
+	}
 }
