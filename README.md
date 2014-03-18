@@ -17,13 +17,11 @@ chmod
 Change the permission of  file or directory.
 
 
-Contact
--------
+# Contact #
 
 Principal developer:
 	[Leonardo Thibes](http://leonardothibes.com) => [eu@leonardothibes.com](mailto:eu@leonardothibes.com)
 
-Support
--------
+# Support #
 
 Please log tickets and issues at our [Projects site](https://github.com/leonardothibes/puppet-php/issues)
