@@ -46,7 +46,7 @@ or
 ```puppet
 util::chown {'Changing owner for some directory':
 	file => '/srv',
-	user => adm,
+	user => 'adm',
 }
 ```
 
