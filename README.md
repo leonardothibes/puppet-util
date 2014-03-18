@@ -15,6 +15,13 @@ Modules. This modules will include the following additions to Puppet
 chmod
 -----
 Change the permission of  file or directory.
+*Sample*
+```puppet
+util::chmod {'Changing permission for some file':
+	file => '/some/file.txt',
+	mode => 0644,
+}
+```
 
 
 # Contact #
@@ -24,4 +31,4 @@ Principal developer:
 
 # Support #
 
-Please log tickets and issues at our [Projects site](https://github.com/leonardothibes/puppet-php/issues)
+Please log tickets and issues at our [Projects site](https://github.com/leonardothibes/puppet-util/issues)
