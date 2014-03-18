@@ -30,6 +30,14 @@ util::chmod {'Changing permission for some directory':
 	mode => 0700,
 }
 ```
+or
+```puppet
+util::chmod {'Changing permission for some directory recursively':
+	file      => '/root',
+	mode      => 0700,
+	recursive => true, # default is "false"
+}
+```
 
 chown
 -----
