@@ -4,7 +4,7 @@ puppet-util
 My Standard Library for Puppet Modules.
 
 This module provides a "standard library" of resources for developing Puppet
-Modules. This modules will include the following additions to Puppet
+Modules. This modules will include the following additions to Puppet:
 
  * chmod
  * chown
