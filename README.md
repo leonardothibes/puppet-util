@@ -53,27 +53,18 @@ util::chown {'Changing owner for some file':
 or
 ```puppet
 util::chown {'Changing owner for some directory':
-	file => '/srv',
-	user => 'adm',
-}
-```
-
-chgrp
------
-Change the group of file or directory.
-
-*Examples:*
-```puppet
-util::chgrp {'Changing group for some file':
-	file  => '/root/file.txt',
-	group => 'root',
+	file  => '/srv',
+	user  => 'root',
+	group => 'admin',
 }
 ```
 or
 ```puppet
-util::chgrp {'Changing group for some directory':
-	file  => '/srv',
-	group => 'admin',
+util::chown {'Changing owner for some directory recursively':
+	file      => '/root',
+	user      => 'root',
+	group     => 'admin',
+	recursive => true,
 }
 ```
 
