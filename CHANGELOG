@@ -1,8 +1,9 @@
 2014-03-18 Leonardo Thibes <eu@leonardothibes.com> - 1.0.0
 ==========================================================
 
- Leonardo Thibes <eu@leonardothibes.com> (4):
+ Leonardo Thibes <eu@leonardothibes.com> (5):
   * Implementando a estrutura inicial do módulo
+  * Adicionando uma VM de desenvolvimento do Vagrant
   * Implementando a função "chmod" #1
   * Implementando a função "chown" #2
   * Implementando a função "chgrp" #3
