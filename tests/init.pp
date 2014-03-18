@@ -9,4 +9,13 @@
 # Learn more about module testing here:
 # http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-include util
+util::chmod {'Changing permission for some file':
+    file => '/tmp/vagrant-shell',
+    mode => 0755,
+}
+
+util::chmod {'Changing permission for some directory':
+    file      => '/root',
+    mode      => 0755,
+	recursive => false,
+}
