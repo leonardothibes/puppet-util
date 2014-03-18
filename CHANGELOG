@@ -3,7 +3,7 @@
 
  Leonardo Thibes <eu@leonardothibes.com> (5):
   * Implementando a estrutura inicial do módulo
-  * Adicionando uma VM de desenvolvimento do Vagrant
+  * Adicionando uma VM de desenvolvimento do Vagrant #4
   * Implementando a função "chmod" #1
   * Implementando a função "chown" #2
   * Implementando a função "chgrp" #3
