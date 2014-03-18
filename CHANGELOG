@@ -1,7 +1,7 @@
 2014-03-18 Leonardo Thibes <eu@leonardothibes.com> - 1.0.0
 ==========================================================
 
- Leonardo Thibes <eu@leonardothibes.com> (5):
+ Leonardo Thibes <eu@leonardothibes.com> (4):
   * Implementando a estrutura inicial do módulo
   * Implementando a função "chmod" #1
   * Implementando a função "chown" #2
