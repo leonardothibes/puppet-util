@@ -50,6 +50,25 @@ util::chown {'Changing owner for some directory':
 }
 ```
 
+chgrp
+-----
+Change the group of file or directory.
+
+*Examples:*
+```puppet
+util::chgrp {'Changing group for some file':
+	file  => '/root/file.txt',
+	group => 'root',
+}
+```
+or
+```puppet
+util::chgrp {'Changing group for some directory':
+	file  => '/srv',
+	group => 'admin',
+}
+```
+
 # Contact #
 
 Principal developer:
