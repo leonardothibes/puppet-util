@@ -19,3 +19,16 @@ util::chmod {'Changing permission for some directory':
     mode      => 0755,
 	recursive => false,
 }
+
+util::chown {'Changing owner for some file':
+    file  => '/tmp/vagrant-shell',
+    user  => 'root',
+	group => 'admin',
+}
+
+util::chown {'Changing owner for some directory':
+    file      => '/root',
+    user      => 'root',
+	group     => 'admin',
+	recursive => true,
+}
