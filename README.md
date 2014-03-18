@@ -16,7 +16,7 @@ chmod
 -----
 Change the permission of  file or directory.
 
-*sample of usage:*
+*Example:*
 ```puppet
 util::chmod {'Changing permission for some file':
 	file => '/some/file.txt',
