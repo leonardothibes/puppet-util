@@ -44,7 +44,7 @@ util::chown {'Changing owner for some file':
 ```
 or
 ```puppet
-util::own {'Changing owner for some directory':
+util::chown {'Changing owner for some directory':
 	file => '/srv',
 	user => adm,
 }
