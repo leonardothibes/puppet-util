@@ -23,7 +23,7 @@ util::chmod {'Changing permission for some file':
 	mode => 0644,
 }
 ```
-
+or
 ```puppet
 util::chmod {'Changing permission for some directory':
 	file => '/root',
