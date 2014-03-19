@@ -34,8 +34,10 @@ class util::compressor::zip
 		}
 		exec {$resource:
 			path    => $util::params::envpath,
-			command => "unzip -d ${to} ${from}",
-			onlyif  => "[ ! -f ${to} ] && [ ! -d ${to} ]",
+			command => "unzip -d . ${from}",
+			cwd     => $to,
+			onlyif  => "[ -d ${to} ]",
+			returns => ['0','1'],
 		}
 	}
 }
