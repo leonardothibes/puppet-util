@@ -75,7 +75,7 @@ Compres an file or directory.
 
 The type of compression is determined for the file extension.
 
-*Examples of compression:*
+*Examples of compressing files:*
 ```puppet
 util::compress {'Compressing some file with zip utility':
 	from => '/tmp/vagrant-shell',
@@ -97,7 +97,7 @@ util::compress {'Compressing some file with bzip2 utility':
 }
 ```
 
-*Examples of uncompression:*
+*Examples of compressing files:*
 ```puppet
 util::uncompress {'Uncompressing some file with zip utility':
     from => '/tmp/vagrant-shell.zip',
