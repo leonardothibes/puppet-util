@@ -104,6 +104,20 @@ util::uncompress {'Uncompressing some file with zip utility':
     to   => '/root',
 }
 ```
+or
+```puppet
+util::uncompress {'Uncompressing some file with gzip utility':
+    from => '/tmp/vagrant-shell.gz',
+    to   => '/root',
+}
+```
+or
+```puppet
+util::uncompress {'Uncompressing some file with bzip2 utility':
+    from => '/tmp/vagrant-shell.bz2',
+    to   => '/root',
+}
+```
 
 # Contact #
 
