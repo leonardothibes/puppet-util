@@ -1,6 +1,6 @@
 name    'leonardothibes-util'
 author  'leonardothibes'
-version '1.0.0'
+version '1.0.1'
 license 'MIT'
 summary 'My Standard Library for Puppet Modules'
 description 'This module provides a "standard library" of resources for developing Puppet Modules'
