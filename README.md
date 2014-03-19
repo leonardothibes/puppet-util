@@ -8,7 +8,6 @@ Modules. This modules will include the following additions to Puppet:
 
  * chmod
  * chown
- * chgrp
  * compress
  * uncompress
 
