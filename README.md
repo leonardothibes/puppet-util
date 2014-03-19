@@ -97,6 +97,13 @@ util::compress {'Compressing some file with bzip2 utility':
 	to   => '/tmp/vagrant-shell.bz2',
 }
 ```
+or
+```puppet
+util::uncompress {'Uncompressing some file with zip utility':
+    from => '/tmp/vagrant-shell.zip',
+    to   => '/root',
+}
+```
 
 # Contact #
 
