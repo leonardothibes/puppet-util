@@ -32,3 +32,13 @@ util::chown {'Changing owner for some directory':
 	group     => 'admin',
 	recursive => true,
 }
+
+util::compress {'Compressing some file with zip utility':
+	from => '/tmp/vagrant-shell',
+	to   => '/tmp/vagrant-shell.zip',
+}
+
+util::uncompress {'Uncompressing some file with zip utility':
+	from => '/tmp/vagrant-shell.zip',
+	to   => '/root',
+}
