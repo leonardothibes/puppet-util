@@ -79,22 +79,22 @@ The type of compression is determined for the file extension.
 *Examples:*
 ```puppet
 util::compress {'Compressing some file':
-	file   => '/tmp/vagrant-shell',
-	target => '/tmp/vagrant-shell.zip',
+	from => '/tmp/vagrant-shell',
+	to   => '/tmp/vagrant-shell.zip',
 }
 ```
 or
 ```puppet
 util::compress {'Compressing some file':
-	file   => '/tmp/vagrant-shell',
-	target => '/tmp/vagrant-shell.gz',
+	from => '/tmp/vagrant-shell',
+	to   => '/tmp/vagrant-shell.gz',
 }
 ```
 or
 ```puppet
 util::compress {'Compressing some file':
-	file   => '/tmp/vagrant-shell',
-	target => '/tmp/vagrant-shell.bz2',
+	from => '/tmp/vagrant-shell',
+	to   => '/tmp/vagrant-shell.bz2',
 }
 ```
 
