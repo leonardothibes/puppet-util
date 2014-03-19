@@ -97,7 +97,7 @@ util::compress {'Compressing some file with bzip2 utility':
 }
 ```
 
-*Examples of compressing files:*
+*Examples of uncompressing files:*
 ```puppet
 util::uncompress {'Uncompressing some file with zip utility':
     from => '/tmp/vagrant-shell.zip',
