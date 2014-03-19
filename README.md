@@ -9,6 +9,8 @@ Modules. This modules will include the following additions to Puppet:
  * chmod
  * chown
  * chgrp
+ * compress
+ * uncompress
 
 # Functions #
 
@@ -65,6 +67,32 @@ util::chown {'Changing owner for some directory recursively':
 	user      => 'root',
 	group     => 'admin',
 	recursive => true,
+}
+```
+
+compress
+--------
+Compres an file or directory.
+
+*Examples:*
+```puppet
+util::compress {'Compressing some file':
+	file   => '/tmp/vagrant-shell',
+	target => '/tmp/vagrant-shell.zip',
+}
+```
+or
+```puppet
+util::compress {'Compressing some file':
+	file   => '/tmp/vagrant-shell',
+	target => '/tmp/vagrant-shell.gz',
+}
+```
+or
+```puppet
+util::compress {'Compressing some file':
+	file   => '/tmp/vagrant-shell',
+	target => '/tmp/vagrant-shell.bz2',
 }
 ```
 
