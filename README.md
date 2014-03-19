@@ -74,6 +74,8 @@ compress
 --------
 Compres an file or directory.
 
+The type of compression is determined for the file extension.
+
 *Examples:*
 ```puppet
 util::compress {'Compressing some file':
