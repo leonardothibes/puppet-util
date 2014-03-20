@@ -7,6 +7,7 @@
   * Implementando função Puppet::Parser::Functions::basename
   * Implementando função Puppet::Parser::Functions::path
   * Implementando função Puppet::Parser::Functions::is_dir
+  * Atualizando a documentação do README.md
 
 2014-03-18 Leonardo Thibes <eu@leonardothibes.com> - 1.0.0
 ==========================================================
