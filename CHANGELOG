@@ -2,8 +2,8 @@
 ==========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (5):
-  * Implementando funções de compressão de arquivos e diretórios #5
-  * Implementando funções de descompressão de arquivos e diretórios #5
+  * Implementando funções de compactação de arquivos e diretórios #5
+  * Implementando funções de descompactação de arquivos e diretórios #6
   * Implementando função Puppet::Parser::Functions::basename
   * Implementando função Puppet::Parser::Functions::path
   * Implementando função Puppet::Parser::Functions::is_dir
