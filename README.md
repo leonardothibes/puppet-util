@@ -9,7 +9,7 @@ Modules. This modules will include the following additions to Puppet:
  * chmod
  * chown
  * compress
- * uncompress
+ * extract
 
 # Functions #
 
@@ -97,23 +97,23 @@ util::compress {'Compressing some file with bzip2 utility':
 }
 ```
 
-*Examples of uncompressing files:*
+*Examples of extracting files:*
 ```puppet
-util::uncompress {'Uncompressing some file with zip utility':
+util::extract {'extracting some file with zip utility':
     from => '/tmp/vagrant-shell.zip',
     to   => '/root',
 }
 ```
 or
 ```puppet
-util::uncompress {'Uncompressing some file with gzip utility':
+util::extract {'extracting some file with gzip utility':
     from => '/tmp/vagrant-shell.gz',
     to   => '/root',
 }
 ```
 or
 ```puppet
-util::uncompress {'Uncompressing some file with bzip2 utility':
+util::extract {'extracting some file with bzip2 utility':
     from => '/tmp/vagrant-shell.bz2',
     to   => '/root',
 }
