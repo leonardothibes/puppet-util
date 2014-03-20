@@ -1,6 +1,12 @@
 module Puppet::Parser::Functions
 	newfunction(:get_extension, :type => :rvalue) do |args|
-		extension = File.extname(args[0])
-		return extension.gsub('.','')
+		name = File.basename(args[0])
+		ext  = name.split('.')
+		ext.shift
+		if ext[1] == nil
+			return ext[0]
+		else
+			return ext.join('.')
+		end
 	end
 end
