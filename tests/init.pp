@@ -62,8 +62,3 @@ util::compress {'Compressing some directory with bzip2 utility':
 	from => '/etc/vim',
 	to   => '/root/vim.tar.bz2',
 }
-
-util::extract {'Extracting some file with zip utility':
-	from => '/root/vim.tar.gz',
-	to   => '/tmp',
-}
