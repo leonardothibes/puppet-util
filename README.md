@@ -119,6 +119,28 @@ util::extract {'extracting some file with bzip2 utility':
 }
 ```
 
+*Examples of compressing directories:*
+```puppet
+util::compress {'Compressing some directory with zip utility':
+	from => '/etc/vim',
+	to   => '/root/vim.zip',
+}
+```
+or
+```puppet
+util::compress {'Compressing some directory with gzip utility':
+	from => '/etc/vim',
+	to   => '/root/vim.tar.gz',
+}
+```
+or
+```puppet
+util::compress {'Compressing some directory with bzip2 utility':
+	from => '/etc/vim',
+	to   => '/root/vim.tar.bz2',
+}
+```
+
 # Contact #
 
 Principal developer:
