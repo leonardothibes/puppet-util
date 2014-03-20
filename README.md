@@ -145,21 +145,21 @@ util::compress {'Compressing some directory with bzip2 utility':
 ```puppet
 util::extract {'Extracting some directory with zip utility':
 	from => '/root/vim.zip',
-	to   => '/etc/vim',
+	to   => '/tmp',
 }
 ```
 or
 ```puppet
 util::extract {'Extracting some directory with gzip utility':
 	from => '/root/vim.tar.gz',
-	to   => '/etc/vim',
+	to   => '/tmp',
 }
 ```
 or
 ```puppet
 util::extract {'Extracting some directory with bzip2 utility':
 	from => '/root/vim.tar.bz2',
-	to   => '/etc/vim',
+	to   => '/tmp',
 }
 ```
 
