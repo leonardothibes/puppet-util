@@ -1,6 +1,6 @@
 class util::params
 {
-	$envpath  = [
+	$envpath = [
 		'/bin',
 		'/sbin',
 		'/usr/bin',
