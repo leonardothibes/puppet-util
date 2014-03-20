@@ -1,10 +1,13 @@
-2014-03-19 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
+2014-03-20 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
 ==========================================================
 
- Leonardo Thibes <eu@leonardothibes.com> (3):
+ Leonardo Thibes <eu@leonardothibes.com> (6):
   * Implementando funções de compactação e descompactação com zip #5
   * Implementando funções de compactação e descompactação com gzip #5
   * Implementando funções de compactação e descompactação com bzip2 #5
+  * Implementando função Puppet::Parser::Functions::basename
+  * Implementando função Puppet::Parser::Functions::path
+  * Implementando função Puppet::Parser::Functions::is_dir
 
 2014-03-18 Leonardo Thibes <eu@leonardothibes.com> - 1.0.0
 ==========================================================
