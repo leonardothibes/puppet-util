@@ -24,14 +24,12 @@ util::chmod {'Changing permission for some file':
 	mode => 0644,
 }
 ```
-or
 ```puppet
 util::chmod {'Changing permission for some directory':
 	file => '/root',
 	mode => 0700,
 }
 ```
-or
 ```puppet
 util::chmod {'Changing permission for some directory recursively':
 	file      => '/root',
@@ -51,7 +49,6 @@ util::chown {'Changing owner for some file':
 	user => 'root',
 }
 ```
-or
 ```puppet
 util::chown {'Changing owner for some directory':
 	file  => '/srv',
@@ -59,7 +56,6 @@ util::chown {'Changing owner for some directory':
 	group => 'admin',
 }
 ```
-or
 ```puppet
 util::chown {'Changing owner for some directory recursively':
 	file      => '/root',
@@ -82,14 +78,12 @@ util::compress {'Compressing some file with zip utility':
 	to   => '/tmp/vagrant-shell.zip',
 }
 ```
-or
 ```puppet
 util::compress {'Compressing some file with gzip utility':
 	from => '/tmp/vagrant-shell',
 	to   => '/tmp/vagrant-shell.gz',
 }
 ```
-or
 ```puppet
 util::compress {'Compressing some file with bzip2 utility':
 	from => '/tmp/vagrant-shell',
@@ -104,14 +98,12 @@ util::extract {'extracting some file with zip utility':
     to   => '/root',
 }
 ```
-or
 ```puppet
 util::extract {'extracting some file with gzip utility':
     from => '/tmp/vagrant-shell.gz',
     to   => '/root',
 }
 ```
-or
 ```puppet
 util::extract {'extracting some file with bzip2 utility':
     from => '/tmp/vagrant-shell.bz2',
@@ -126,14 +118,12 @@ util::compress {'Compressing some directory with zip utility':
 	to   => '/root/vim.zip',
 }
 ```
-or
 ```puppet
 util::compress {'Compressing some directory with gzip utility':
 	from => '/etc/vim',
 	to   => '/root/vim.tar.gz',
 }
 ```
-or
 ```puppet
 util::compress {'Compressing some directory with bzip2 utility':
 	from => '/etc/vim',
@@ -148,14 +138,12 @@ util::extract {'Extracting some directory with zip utility':
 	to   => '/tmp',
 }
 ```
-or
 ```puppet
 util::extract {'Extracting some directory with gzip utility':
 	from => '/root/vim.tar.gz',
 	to   => '/tmp',
 }
 ```
-or
 ```puppet
 util::extract {'Extracting some directory with bzip2 utility':
 	from => '/root/vim.tar.bz2',
