@@ -1,27 +1,40 @@
 define util::compress($from = $title, $to)
 {
-	$ext = get_extension($to)
-	case $ext {
-		'zip','zp': {
-			util::compressor::zip::compress {$title:
-				from => $from,
-				to   => $to,
-			}
+	include util::params
+	include util::dependencies
+	
+	$compress  = basename($from)
+	$basename  = basename($to)
+	$extension = get_extension($to)
+	$target    = path($to)
+
+	if is_dir($from) {
+		$middle = $extension ? {
+			'zip'            => "zip -r ${basename} ${compress}",
+			/(tar.gz|tgz)/   => "tar -zcf ${basename} ${compress}",
+			/(tar.bz2|tbz2)/ => "tar -jcf ${basename} ${compress}",
+			default          => false,
 		}
-		'gzip','gz','tgz': {
-			util::compressor::gzip::compress {$title:
-				from => $from,
-				to   => $to,
-			}
+	} else {
+		$middle = $extension ? {
+			'zip'   => "zip -r ${basename} ${compress}",
+			'gz'    => "gzip ${compress}",
+			'bz2'   => "bzip2 ${compress}",
+			default => false,
 		}
-		'bzip2','bz','bz2': {
-			util::compressor::gzip::compress {$title:
-				from => $from,
-				to   => $to,
-			}
-		}
-		default: {
-			fail("Unsupported extension: ${ext}")
-		}
+	}
+	if $middle == false {
+		fail("Unknown extension value: \"${extension}\"")
+	}
+
+	$begin   = "cp -Rf ${from} . && "
+	$end     = " && rm -Rf ${compress}"
+	$command = "${begin}${middle}${end}"
+	
+	exec {"util::compress::${from}::to::${to}":
+		path    => $util::params::envpath,
+		command => $command,
+		onlyif  => "[ ! -f ${basename} ]",
+		cwd     => $target,
 	}
 }

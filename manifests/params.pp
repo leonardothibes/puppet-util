@@ -8,4 +8,5 @@ class util::params
 		'/usr/local/bin',
 		'/usr/local/sbin',
 	]
+	$packages = ['zip','unzip','gzip','bzip2','tar']
 }
