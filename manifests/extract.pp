@@ -9,8 +9,8 @@ define util::extract($from = $title, $to)
 	if is_dir($to) {
 		$args   = '--no-same-owner --no-same-permissions'
 		$middle = $extension ? {
-			/(tar.gz|tgz)/   => "tar -xzf ${args} ${extract}",
-			/(tar.bz2|tbz2)/ => "tar -xjf ${args} ${extract}",
+			/(tar.gz|tgz)/   => "tar ${args} -xzf ${extract}",
+			/(tar.bz2|tbz2)/ => "tar ${args} -xjf ${extract}",
 			/(gzip|gz)/      => "gunzip ${extract}",
 			/(bzip2|bz2)/    => "bunzip2 ${extract}",
 			'zip'            => "unzip ${extract}",
@@ -23,10 +23,10 @@ define util::extract($from = $title, $to)
 		fail("Unknown extension value: \"${extension}\"")
 	}
 
-	$begin   = "cp -Rf ${from} . && "
+	$begin   = "cp -f ${from} . && "
 	$end     = " ; rm -Rf ${extract}"
 	$command = "${begin}${middle}${end}"
-	
+
 	exec {"util::extract::${from}::to::${to}":
 		path    => $util::params::envpath,
 		command => $command,
