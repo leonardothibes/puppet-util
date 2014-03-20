@@ -38,11 +38,6 @@ util::compress {'Compressing some file with zip utility':
 	to   => '/root/hosts.zip',
 }
 
-#util::uncompress {'Uncompressing some file with zip utility':
-#	from => '/tmp/vagrant-shell.zip',
-#	to   => '/root',
-#}
-
 util::compress {'Compressing some file with gzip utility':
 	from => '/etc/hosts',
 	to   => '/root/hosts.gz',
@@ -66,4 +61,9 @@ util::compress {'Compressing some directory with gzip utility':
 util::compress {'Compressing some directory with bzip2 utility':
 	from => '/etc/vim',
 	to   => '/root/vim.tar.bz2',
+}
+
+util::extract {'Extracting some file with zip utility':
+	from => '/root/vim.tar.gz',
+	to   => '/tmp',
 }
