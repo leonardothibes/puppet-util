@@ -91,6 +91,12 @@ util::compress {'Compressing some file with bzip2 utility':
 }
 ```
 
+extract
+-------
+Extract an compressed file.
+
+The type of extraction is determined for the file extension.
+
 *Examples of extracting files:*
 ```puppet
 util::extract {'extracting some file with zip utility':
